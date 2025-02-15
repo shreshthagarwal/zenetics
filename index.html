@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenetics - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="assets/profile.png" alt="Profile" class="profile-photo">
+    
+            <!-- Hamburger Menu -->
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+    
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html" id="nav-login">Login/Signup</a></li>
+                <li><a href="home.html" id="nav-home">Home</a></li>
+                <li><a href="active-courses.html" id="nav-courses">Active Courses</a></li>
+                <li><a href="feedback.html" id="nav-reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Logo Below Navbar -->
+    <div class="logo-container">
+        <img src="assets/logo.png" alt="Zenetics Logo" class="site-logo">
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-container">
+        <!-- Sign in with Google -->
+        <div class="google-login">
+            <img src="assets/google-logo.png" alt="Google Logo" class="google-icon">
+            Sign in with Google
+        </div>
+
+        <h2>Login / Signup</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

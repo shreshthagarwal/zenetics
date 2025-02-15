@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenetics - Player 1</title>
+    <link rel="stylesheet" href="css/home.css"> <!-- Reuse home.css -->
+    <link rel="stylesheet" href="css/player.css"> <!-- Add new CSS for this page -->
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <img src="assets/profile.png" alt="Profile" class="profile-photo">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="index.html" id="nav-login">Login/Signup</a></li>
+                <li><a href="home.html" id="nav-home">Home</a></li>
+                <li><a href="active-courses.html" id="nav-courses">Active Courses</a></li>
+                <li><a href="feedback.html" id="nav-reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Video Player -->
+    <div class="video-player-section">
+        <video id="videoPlayer" controls>
+            <source src="assets/sample-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Course Details and Upcoming Videos -->
+    <div class="course-details-section">
+        <!-- Course Details -->
+        <div class="course-details">
+            <h2>Beginner Weights</h2>
+            <p>⭐️⭐️⭐️⭐️ (4.0)</p>
+            <p>Learn the basics of weight training with expert guidance.</p>
+            <div class="progress-section">
+                <p><strong>Course Progress:</strong> 57%</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 57%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upcoming Videos -->
+        <div class="upcoming-videos">
+            <h2>Upcoming Videos</h2>
+            <div class="video-cards">
+                <!-- Video Card 1 -->
+                <div class="video-card">
+                    <img src="assets/bg.jpg" alt="Video 1">
+                    <h3>Introduction to Weights</h3>
+                    <p>Learn the basics of weightlifting.</p>
+                </div>
+                <!-- Video Card 2 -->
+                <div class="video-card">
+                    <img src="assets/bg.jpg" alt="Video 2">
+                    <h3>Proper Form and Technique</h3>
+                    <p>Master the correct form for weightlifting.</p>
+                </div>
+                <!-- Video Card 3 -->
+                <div class="video-card">
+                    <img src="assets/bg.jpg" alt="Video 3">
+                    <h3>Advanced Weightlifting</h3>
+                    <p>Take your skills to the next level.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

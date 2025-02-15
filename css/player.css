@@ -1,0 +1,128 @@
+/* Global Box Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Video Player Section */
+.video-player-section {
+    max-width: 1200px;
+    margin: 80px auto 20px; /* Added 80px top margin to avoid navbar overlap */
+    padding: 0 20px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Course Details and Upcoming Videos */
+.course-details-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.course-details {
+    flex: 1;
+    background: #FF6659; /* Light red background */
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-details h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.course-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.progress-section {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.progress {
+    height: 100%;
+    background: white;
+    border-radius: 5px;
+}
+
+/* Upcoming Videos */
+.upcoming-videos {
+    flex: 1;
+    background: #FF6659; /* Light red background */
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-videos h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+}
+
+.video-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.video-card img {
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.video-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.video-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-details-section {
+        flex-direction: column;
+    }
+
+    .video-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .video-card img {
+        width: 100%;
+        height: auto;
+    }
+}

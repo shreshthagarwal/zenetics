@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenetics - Home</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <img src="assets/profile.png" alt="Profile" class="profile-photo">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="index.html" id="nav-login">Login/Signup</a></li>
+                <li><a href="home.html" id="nav-home" class="active">Home</a></li>
+                <li><a href="active-courses.html" id="nav-courses">Active Courses</a></li>
+                <li><a href="feedback.html" id="nav-reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="Zenetics Logo" class="site-logo">
+            <div class="categories">
+                <div class="category">
+                    <img src="assets/weights-icon.png" alt="Weights">
+                    <p>Weights</p>
+                </div>
+                <div class="category">
+                    <img src="assets/calesthenics-icon.png" alt="Calisthenics">
+                    <p>Calisthenics</p>
+                </div>
+                <div class="category">
+                    <img src="assets/yoga-icon.png" alt="Yoga">
+                    <p>Yoga</p>
+                </div>
+                <div class="category">
+                    <img src="assets/cardio-icon.png" alt="Cardio">
+                    <p>Cardio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Carousel -->
+        <div class="carousel">
+            <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-content">
+                        <img src="assets/bg.jpg" alt="Course 1">
+                        <div class="carousel-text">
+                            <h3>Beginner Weights</h3>
+                            <p>Learn the basics of weight training.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <img src="assets/bg.jpg" alt="Course 2">
+                        <div class="carousel-text">
+                            <h3>Advanced Calisthenics</h3>
+                            <p>Master advanced bodyweight exercises.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <img src="assets/bg.jpg" alt="Course 3">
+                        <div class="carousel-text">
+                            <h3>Yoga for Flexibility</h3>
+                            <p>Improve flexibility and relaxation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <img src="assets/course4.jpg" alt="Course 4">
+                        <div class="carousel-text">
+                            <h3>Cardio Blast</h3>
+                            <p>High-intensity cardio workouts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter and Course Cards -->
+        <div class="course-section">
+            <!-- Filter Box -->
+            <div class="filter-box">
+                <h3>Filter Courses</h3>
+                <div class="filter-option">
+                    <label><input type="checkbox" name="category" value="weights"> Weights</label>
+                </div>
+                <div class="filter-option">
+                    <label><input type="checkbox" name="category" value="calisthenics"> Calisthenics</label>
+                </div>
+                <div class="filter-option">
+                    <label><input type="checkbox" name="category" value="yoga"> Yoga</label>
+                </div>
+                <div class="filter-option">
+                    <label><input type="checkbox" name="category" value="cardio"> Cardio</label>
+                </div>
+                <button class="apply-button">Apply Filters</button>
+            </div>
+
+            <!-- Course Cards -->
+            <div class="course-cards">
+                <div class="course-card">
+                    <img src="assets/bg.jpg" alt="Course 1">
+                    <h3>Beginner Weights</h3>
+                    <p>⭐️⭐️⭐️⭐️ (4.0)</p>
+                    <p>Learn the basics of weight training.</p>
+                </div>
+                <div class="course-card">
+                    <img src="assets/bg.jpg" alt="Course 2">
+                    <h3>Advanced Calisthenics</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
+                    <p>Master advanced bodyweight exercises.</p>
+                </div>
+                <div class="course-card">
+                    <img src="assets/course3.jpg" alt="Course 3">
+                    <h3>Yoga for Flexibility</h3>
+                    <p>⭐️⭐️⭐️⭐️ (4.5)</p>
+                    <p>Improve flexibility and relaxation.</p>
+                </div>
+                <div class="course-card">
+                    <img src="assets/course4.jpg" alt="Course 4">
+                    <h3>Cardio Blast</h3>
+                    <p>⭐️⭐️⭐️⭐️ (4.2)</p>
+                    <p>High-intensity cardio workouts.</p>
+                </div>
+                <div class="course-card">
+                    <img src="assets/bg.jpg" alt="Course 1">
+                    <h3>Beginner Weights</h3>
+                    <p>⭐️⭐️⭐️⭐️ (4.0)</p>
+                    <p>Learn the basics of weight training.</p>
+                </div>
+                <div class="course-card">
+                    <img src="assets/bg.jpg" alt="Course 2">
+                    <h3>Advanced Calisthenics</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
+                    <p>Master advanced bodyweight exercises.</p>
+                </div>
+                <div class="course-card">
+                    <img src="assets/course3.jpg" alt="Course 3">
+                    <h3>Yoga for Flexibility</h3>
+                    <p>⭐️⭐️⭐️⭐️ (4.5)</p>
+                    <p>Improve flexibility and relaxation.</p>
+                </div>
+                <div class="course-card">
+                    <img src="assets/course4.jpg" alt="Course 4">
+                    <h3>Cardio Blast</h3>
+                    <p>⭐️⭐️⭐️⭐️ (4.2)</p>
+                    <p>High-intensity cardio workouts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/carousel.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

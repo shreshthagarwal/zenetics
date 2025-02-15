@@ -1,0 +1,155 @@
+/* Global Box Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Reviews Section */
+.reviews-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.review-cards-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding-bottom: 20px; /* Add space for scrollbar */
+}
+
+.review-cards {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    width: max-content; /* Allow cards to overflow horizontally */
+}
+
+.review-card {
+    background: #FF6659; /* Light red background */
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+.review-profile {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.review-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.review-card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Selected Course and Review Box */
+.selected-course-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.selected-course-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.selected-course {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #FF6659; /* Light red background */
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.selected-course img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.course-details {
+    flex: 1;
+    text-align: left;
+}
+
+.course-details h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.course-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.review-box {
+    background: #FF6659; /* Light red background */
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-box h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.review-box textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background: white;
+    color: #D32F2F;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #FF6659;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .selected-course {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .course-details {
+        text-align: center;
+    }
+}

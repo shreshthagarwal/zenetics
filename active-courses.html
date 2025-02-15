@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenetics - Active Courses</title>
+    <link rel="stylesheet" href="css/home.css"> <!-- Reuse home.css -->
+    <link rel="stylesheet" href="css/active-courses.css"> <!-- Add new CSS for this page -->
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <img src="assets/profile.png" alt="Profile" class="profile-photo">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="index.html" id="nav-login">Login/Signup</a></li>
+                <li><a href="home.html" id="nav-home">Home</a></li>
+                <li><a href="active-courses.html" id="nav-courses" class="active">Active Courses</a></li>
+                <li><a href="feedback.html" id="nav-reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="Zenetics Logo" class="site-logo">
+            <div class="categories">
+                <div class="category">
+                    <img src="assets/weights-icon.png" alt="Weights">
+                    <p>Weights</p>
+                </div>
+                <div class="category">
+                    <img src="assets/calesthenics-icon.png" alt="Calisthenics">
+                    <p>Calisthenics</p>
+                </div>
+                <div class="category">
+                    <img src="assets/yoga-icon.png" alt="Yoga">
+                    <p>Yoga</p>
+                </div>
+                <div class="category">
+                    <img src="assets/cardio-icon.png" alt="Cardio">
+                    <p>Cardio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Active Courses Section -->
+    <div class="active-courses-section">
+        <!-- Course Card 1 -->
+<div class="course-card">
+    <div class="course-info">
+        <h3>Beginner Weights</h3>
+        <p>⭐️⭐️⭐️⭐️ (4.0)</p>
+        <p>Learn the basics of weight training.</p>
+    </div>
+    <div class="course-image">
+        <img src="assets/bg.jpg" alt="Course 1">
+    </div>
+    <div class="course-progress">
+        <p><strong>Status:</strong> Pending</p>
+        <p><strong>Completion:</strong> 57%</p>
+        <div class="progress-bar">
+            <div class="progress" style="width: 57%;"></div>
+        </div>
+        <p><strong>Videos Completed:</strong> 3/6</p>
+        <a href="player1.html" class="resume-button">Resume Course</a> <!-- Updated link -->
+    </div>
+</div>
+
+<!-- Course Card 2 -->
+<div class="course-card">
+    <div class="course-info">
+        <h3>Advanced Calisthenics</h3>
+        <p>⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
+        <p>Master advanced bodyweight exercises.</p>
+    </div>
+    <div class="course-image">
+        <img src="assets/bg.jpg" alt="Course 2">
+    </div>
+    <div class="course-progress">
+        <p><strong>Status:</strong> Pending</p>
+        <p><strong>Completion:</strong> 75%</p>
+        <div class="progress-bar">
+            <div class="progress" style="width: 75%;"></div>
+        </div>
+        <p><strong>Videos Completed:</strong> 5/8</p>
+        <a href="player2.html" class="resume-button">Resume Course</a> <!-- Updated link -->
+    </div>
+</div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

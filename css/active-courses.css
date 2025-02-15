@@ -1,0 +1,110 @@
+/* Active Courses Section */
+.active-courses-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course-card {
+    display: flex;
+    background: #FF6659; /* Light red background */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.course-info h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.course-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.course-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-image img {
+    width: 100%;
+    max-width: 300px; /* Increased image size */
+    height: auto;
+    border-radius: 10px;
+}
+
+.course-progress {
+    flex: 1;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.course-progress p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.progress {
+    height: 100%;
+    background: white;
+    border-radius: 5px;
+}
+.resume-button {
+    padding: 10px 20px;
+    background: white;
+    color: #D32F2F;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it behave like a button */
+}
+
+.resume-button:hover {
+    background: #FF6659;
+    color: white;
+}
+
+.resume-button:hover {
+    background: #FF6659;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .course-info, .course-image, .course-progress {
+        padding: 10px 0;
+    }
+
+    .course-image img {
+        max-width: 100%;
+    }
+}

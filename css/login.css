@@ -1,0 +1,198 @@
+/* Black Overlay for Background */
+body {
+    background: url('../assets/bg.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* Navbar Styling - Red Theme */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #D32F2F;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Centered Tabs */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+/* Active Tab Highlight */
+.nav-links a.active {
+    background: #FF6659;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hamburger Menu - Fixed Positioning */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #D32F2F;
+        text-align: center;
+        padding: 10px 0;
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Logo Container */
+.logo-container {
+    margin-top: 40px;  /* Reduced margin to bring it closer to navbar */
+    text-align: center;
+}
+
+.site-logo {
+    width: 200px; /* Default size for mobile */
+    height: auto;
+}
+
+/* Increase logo size on desktop */
+@media (min-width: 768px) {
+    .site-logo {
+        width: 300px; /* Larger size for desktop */
+    }
+}
+
+/* Login Box - Bigger & Higher */
+.login-container {
+    background: #D32F2F;
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 420px; /* Increased width */
+    color: white;
+    margin-top: -20px; /* Moved higher */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Google Login Button */
+.google-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 14px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Google Icon - Fixed Size */
+.google-icon {
+    width: 44px;
+    height: 24px;
+}
+
+/* Input Fields - Uniform Width */
+input {
+    display: block;
+    width: 100%;  /* Full width */
+    margin: 15px auto;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Bigger Button */
+button {
+    width: 100%; /* Full width */
+    padding: 14px;
+    background: white;
+    color: #D32F2F;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+button:hover {
+    background: #FF6659;
+    color: white;
+}

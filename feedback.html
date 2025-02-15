@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenetics - Feedback</title>
+    <link rel="stylesheet" href="css/home.css"> <!-- Reuse home.css -->
+    <link rel="stylesheet" href="css/feedback.css"> <!-- Add new CSS for this page -->
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <img src="assets/profile.png" alt="Profile" class="profile-photo">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="index.html" id="nav-login">Login/Signup</a></li>
+                <li><a href="home.html" id="nav-home">Home</a></li>
+                <li><a href="active-courses.html" id="nav-courses">Active Courses</a></li>
+                <li><a href="feedback.html" id="nav-reviews" class="active">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="Zenetics Logo" class="site-logo">
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="reviews-section">
+        <h2>User Reviews</h2>
+        <div class="review-cards-container">
+            <div class="review-cards">
+                <!-- Review Card 1 -->
+                <div class="review-card">
+                    <img src="assets/profile.png" alt="User 1" class="review-profile">
+                    <h3>John Doe</h3>
+                    <p>"This course changed my life! Highly recommended."</p>
+                </div>
+                <!-- Review Card 2 -->
+                <div class="review-card">
+                    <img src="assets/profile.png" alt="User 2" class="review-profile">
+                    <h3>Jane Smith</h3>
+                    <p>"Amazing content and great instructors."</p>
+                </div>
+                <!-- Review Card 3 -->
+                <div class="review-card">
+                    <img src="assets/profile.png" alt="User 3" class="review-profile">
+                    <h3>Alice Johnson</h3>
+                    <p>"Very well-structured and easy to follow."</p>
+                </div>
+                <!-- Review Card 4 -->
+                <div class="review-card">
+                    <img src="assets/profile.png" alt="User 4" class="review-profile">
+                    <h3>Bob Brown</h3>
+                    <p>"Great for beginners and advanced learners alike."</p>
+                </div>
+                <!-- Review Card 5 -->
+                <div class="review-card">
+                    <img src="assets/profile.png" alt="User 5" class="review-profile">
+                    <h3>Charlie Davis</h3>
+                    <p>"The best fitness course I've ever taken."</p>
+                </div>
+                <!-- Review Card 6 -->
+                <div class="review-card">
+                    <img src="assets/profile.png" alt="User 6" class="review-profile">
+                    <h3>Eve Wilson</h3>
+                    <p>"Highly engaging and informative."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Selected Course and Review Box -->
+    <div class="selected-course-section">
+        <h2>Selected Course</h2>
+        <div class="selected-course">
+            <img src="assets/bg.jpg" alt="Selected Course">
+            <div class="course-details">
+                <h3>Beginner Weights</h3>
+                <p>⭐️⭐️⭐️⭐️ (4.0)</p>
+                <p>Learn the basics of weight training.</p>
+            </div>
+        </div>
+        <div class="review-box">
+            <h3>Add a Review for the Selected Course</h3>
+            <textarea placeholder="Write your review here..."></textarea>
+            <button class="submit-button">Submit Review</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
