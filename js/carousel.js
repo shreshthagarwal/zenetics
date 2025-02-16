@@ -16,3 +16,6 @@ function moveCarousel(direction) {
     const offset = -currentIndex * 100;
     carouselInner.style.transform = `translateX(${offset}%)`;
 }
+
+// Auto-slide every 5 seconds
+setInterval(() => moveCarousel(1), 3000);

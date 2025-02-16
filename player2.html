@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenetics - Video Player</title>
-    <link rel="stylesheet" href="css/player.css">
+    <title>Zenetics - Player 2</title>
+    <link rel="stylesheet" href="css/home.css"> <!-- Reuse home.css -->
+    <link rel="stylesheet" href="css/player.css"> <!-- Add new CSS for this page -->
 </head>
 <body>
+    <!-- Navbar -->
     <header>
         <nav class="navbar">
-            <img src="assets/profile.jpg" alt="Profile" class="profile-photo">
-    
-            <!-- Hamburger Menu -->
-            <div class="hamburger" onclick="toggleMenu()">
-                &#9776;
-            </div>
-    
-            <!-- Navigation Links -->
+            <img src="assets/profile.png" alt="Profile" class="profile-photo">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             <ul class="nav-links">
                 <li><a href="index.html" id="nav-login">Login/Signup</a></li>
                 <li><a href="home.html" id="nav-home">Home</a></li>
@@ -25,13 +21,73 @@
             </ul>
         </nav>
     </header>
-    
-    
-    <section class="video-player">
-        <video controls>
-            <source src="assets/video1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
+
+    <!-- Video Player -->
+    <div class="video-player-section">
+        <iframe 
+            id="videoPlayer" 
+            width="100%" 
+            height="500" 
+            src="https://www.youtube.com/embed/J2JHDavNZB4" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Course Details and Upcoming Videos -->
+    <div class="course-details-section">
+        <!-- Course Details -->
+        <div class="course-details">
+            <h2>Advanced Calisthenics</h2>
+            <p>⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
+            <p>Take your bodyweight training to the next level with advanced calisthenics techniques. This course covers skills like handstands, muscle-ups, and planches, helping you build strength, control, and agility. Perfect for fitness enthusiasts looking to master advanced movements.</p>
+            <div class="progress-section">
+                <p><strong>Course Progress:</strong> 72%</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 72%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upcoming Videos -->
+        <div class="upcoming-videos">
+            <h2>Upcoming Videos</h2>
+            <div class="video-cards">
+                <!-- Video Card 1 -->
+                <div class="video-card">
+                    <img src="assets/course2.png" alt="Video 1">
+                    <h3>Mastering Handstands</h3>
+                    <p>Learn the fundamentals of handstands, including balance, alignment, and progressions to achieve a freestanding handstand.</p>
+                </div>
+                <!-- Video Card 2 -->
+                <div class="video-card">
+                    <img src="assets/course3.png" alt="Video 2">
+                    <h3>Muscle-Up Progression</h3>
+                    <p>Discover the steps to perform a flawless muscle-up, from explosive pull-ups to smooth transitions on the bar.</p>
+                </div>
+                <!-- Video Card 3 -->
+                <div class="video-card">
+                    <img src="assets/course4.png" alt="Video 3">
+                    <h3>Planche Training</h3>
+                    <p>Build the strength and stability required to hold a planche, starting with foundational exercises and progressions.</p>
+                </div>
+                <!-- Video Card 4 -->
+                <div class="video-card">
+                    <img src="assets/course5.png" alt="Video 4">
+                    <h3>Front Lever Basics</h3>
+                    <p>Understand the mechanics of the front lever and start training with beginner-friendly exercises to build core and back strength.</p>
+                </div>
+                <!-- Video Card 5 -->
+                <div class="video-card">
+                    <img src="assets/course6.png" alt="Video 5">
+                    <h3>Advanced Core Workouts</h3>
+                    <p>Strengthen your core with advanced exercises like dragon flags, L-sits, and hollow body holds to support your calisthenics journey.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
