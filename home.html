@@ -117,59 +117,63 @@
             
                 <h3>Sort by Video Duration</h3>
                 <div class="filter-option">
-                    <label><input type="radio" name="duration" value="less than 30"> less than 30 min</label>
+                    <label><input type="radio" name="duration" value="more than 10"> More than 10 minutes</label>
                 </div>
                 <div class="filter-option">
-                    <label><input type="radio" name="duration" value="30-60"> 30 min - 1 hr</label>
+                    <label><input type="radio" name="duration" value="10-15"> 10-15 minutes</label>
                 </div>
                 <div class="filter-option">
-                    <label><input type="radio" name="duration" value="greater than 60"> greater than 1 hr</label>
+                    <label><input type="radio" name="duration" value="15-20"> 15-20 minutes</label>
                 </div>
             
                 <h3>Number of Videos</h3>
                 <div class="filter-option">
-                    <label><input type="radio" name="videos" value="less than 5"> less than 5</label>
+                    <label><input type="radio" name="videos" value="3 or more"> 3 or more</label>
                 </div>
                 <div class="filter-option">
-                    <label><input type="radio" name="videos" value="5-10"> 5-10</label>
+                    <label><input type="radio" name="videos" value="3-5"> 3-5</label>
                 </div>
                 <div class="filter-option">
-                    <label><input type="radio" name="videos" value="greater than 10"> greater than 10</label>
+                    <label><input type="radio" name="videos" value="5 or more"> 5 or more</label>
                 </div>
             
                 <button class="apply-button" onclick="applyFilters()">Apply Filters</button>
             </div>
 
             <div class="course-cards" id="course-cards">
-                <div class="course-card" data-category="weights" data-duration="30-60" data-videos="5-10">
-                    <img src="assets/course1.png" alt="Course 1">
-                    <h3>Beginner Weights</h3>
-                    <p class="rating">⭐️⭐️⭐️⭐️ (4.0)</p>
-                    <p>Learn the basics of weight training, including proper form, safety, and effective exercises to build strength.</p>
-                    <!-- Hover Overlay -->
-                    <div class="hover-overlay">
-                        <h4>Course Details</h4>
-                        <p><strong>Category:</strong> Weights</p>
-                        <p><strong>Duration:</strong> 30-60 minutes</p>
-                        <p><strong>Videos:</strong> 5-10</p>
-                        <p><strong>Course Type:</strong> Beginner</p>
-                    </div>
+                <div class="course-card" data-category="weights" data-duration="10-15" data-videos="3-5">
+                    <a href="player1.html">
+                        <img src="assets/course1.png" alt="Course 1">
+                        <h3>Beginner Weights</h3>
+                        <p class="rating">⭐️⭐️⭐️⭐️ (4.0)</p>
+                        <p>Learn the basics of weight training, including proper form, safety, and effective exercises to build strength.</p>
+                        <!-- Hover Overlay -->
+                        <div class="hover-overlay">
+                            <h4>Course Details</h4>
+                            <p><strong>Category:</strong> Weights</p>
+                            <p><strong>Duration:</strong> 10-15 minutes</p>
+                            <p><strong>Videos:</strong> 3-5</p>
+                            <p><strong>Course Type:</strong> Beginner</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="course-card" data-category="calisthenics" data-duration="greater than 60" data-videos="greater than 10">
-                    <img src="assets/course2.png" alt="Course 2">
-                    <h3>Advanced Calisthenics</h3>
-                    <p class="rating">⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
-                    <p>Master advanced bodyweight movements like planches, levers, and explosive push-ups to take your fitness to the next level.</p>
-                    <!-- Hover Overlay -->
-                    <div class="hover-overlay">
-                        <h4>Course Details</h4>
-                        <p><strong>Category:</strong> Calisthenics</p>
-                        <p><strong>Duration:</strong> Greater than 60 minutes</p>
-                        <p><strong>Videos:</strong> Greater than 10</p>
-                        <p><strong>Course Type:</strong> Advanced</p>
-                    </div>
+                <div class="course-card" data-category="calisthenics" data-duration="15-20" data-videos="5 or more">
+                    <a href="player2.html">
+                        <img src="assets/course2.png" alt="Course 2">
+                        <h3>Advanced Calisthenics</h3>
+                        <p class="rating">⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
+                        <p>Master advanced bodyweight movements like planches, levers, and explosive push-ups to take your fitness to the next level.</p>
+                        <!-- Hover Overlay -->
+                        <div class="hover-overlay">
+                            <h4>Course Details</h4>
+                            <p><strong>Category:</strong> Calisthenics</p>
+                            <p><strong>Duration:</strong> 15-20 minutes</p>
+                            <p><strong>Videos:</strong> 5 or more</p>
+                            <p><strong>Course Type:</strong> Advanced</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="course-card" data-category="yoga" data-duration="less than 30" data-videos="less than 5">
+                <div class="course-card" data-category="yoga" data-duration="more than 10" data-videos="3 or more">
                     <img src="assets/course3.png" alt="Course 3">
                     <h3>Yoga for Flexibility</h3>
                     <p class="rating">⭐️⭐️⭐️⭐️ (4.5)</p>
@@ -178,12 +182,12 @@
                     <div class="hover-overlay">
                         <h4>Course Details</h4>
                         <p><strong>Category:</strong> Yoga</p>
-                        <p><strong>Duration:</strong> Less than 30 minutes</p>
-                        <p><strong>Videos:</strong> Less than 5</p>
+                        <p><strong>Duration:</strong> More than 10 minutes</p>
+                        <p><strong>Videos:</strong> 3 or more</p>
                         <p><strong>Course Type:</strong> Beginner to Intermediate</p>
                     </div>
                 </div>
-                <div class="course-card" data-category="cardio" data-duration="30-60" data-videos="5-10">
+                <div class="course-card" data-category="cardio" data-duration="10-15" data-videos="3-5">
                     <img src="assets/course4.png" alt="Course 4">
                     <h3>Cardio Blast</h3>
                     <p class="rating">⭐️⭐️⭐️⭐️ (4.2)</p>
@@ -192,12 +196,12 @@
                     <div class="hover-overlay">
                         <h4>Course Details</h4>
                         <p><strong>Category:</strong> Cardio</p>
-                        <p><strong>Duration:</strong> 30-60 minutes</p>
-                        <p><strong>Videos:</strong> 5-10</p>
+                        <p><strong>Duration:</strong> 10-15 minutes</p>
+                        <p><strong>Videos:</strong> 3-5</p>
                         <p><strong>Course Type:</strong> Intermediate</p>
                     </div>
                 </div>
-                <div class="course-card" data-category="weights" data-duration="greater than 60" data-videos="greater than 10">
+                <div class="course-card" data-category="weights" data-duration="15-20" data-videos="5 or more">
                     <img src="assets/course5.png" alt="Course 5">
                     <h3>Strength Training 101</h3>
                     <p class="rating">⭐️⭐️⭐️⭐️ (4.0)</p>
@@ -206,8 +210,8 @@
                     <div class="hover-overlay">
                         <h4>Course Details</h4>
                         <p><strong>Category:</strong> Weights</p>
-                        <p><strong>Duration:</strong> Greater than 60 minutes</p>
-                        <p><strong>Videos:</strong> Greater than 10</p>
+                        <p><strong>Duration:</strong> 15-20 minutes</p>
+                        <p><strong>Videos:</strong> 5 or more</p>
                         <p><strong>Course Type:</strong> Beginner to Advanced</p>
                     </div>
                 </div>

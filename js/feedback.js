@@ -1,14 +1,14 @@
 // Sample reviews data
 const reviewsData = {
     "beginner-weights": [
-        { name: "John Doe", review: "This course changed my life! Highly recommended." },
-        { name: "Jane Smith", review: "Amazing content and great instructors." },
-        { name: "Alice Johnson", review: "Very well-structured and easy to follow." }
+        { name: "John Doe", review: "This course changed my life! Highly recommended.", course: "Beginner Weights" },
+        { name: "Jane Smith", review: "Amazing content and great instructors.", course: "Beginner Weights" },
+        { name: "Alice Johnson", review: "Very well-structured and easy to follow.", course: "Beginner Weights" }
     ],
     "advanced-calisthenics": [
-        { name: "Bob Brown", review: "Great for beginners and advanced learners alike." },
-        { name: "Charlie Davis", review: "The best fitness course I've ever taken." },
-        { name: "Eve Wilson", review: "Highly engaging and informative." }
+        { name: "Bob Brown", review: "Great for beginners and advanced learners alike.", course: "Advanced Calisthenics" },
+        { name: "Charlie Davis", review: "The best fitness course I've ever taken.", course: "Advanced Calisthenics" },
+        { name: "Eve Wilson", review: "Highly engaging and informative.", course: "Advanced Calisthenics" }
     ]
 };
 
@@ -28,6 +28,7 @@ function loadReviews() {
         reviewCard.innerHTML = `
             <img src="assets/profile.png" alt="${review.name}" class="review-profile">
             <h3>${review.name}</h3>
+            <p><strong>Course:</strong> ${review.course}</p>
             <p>"${review.review}"</p>
         `;
         reviewCardsContainer.appendChild(reviewCard);
@@ -63,8 +64,11 @@ function submitReview() {
     const courseSelect = document.getElementById("course-select");
     const selectedCourse = courseSelect.value;
 
+    // Get the course name based on the selected course
+    const courseName = selectedCourse === "beginner-weights" ? "Beginner Weights" : "Advanced Calisthenics";
+
     // Add the new review to the reviews data
-    reviewsData[selectedCourse].push({ name: "You", review: reviewText });
+    reviewsData[selectedCourse].push({ name: "You", review: reviewText, course: courseName });
 
     // Reload reviews to display the new one
     loadReviews();
