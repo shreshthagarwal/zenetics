@@ -24,15 +24,10 @@
 
     <!-- Video Player -->
     <div class="video-player-section">
-        <iframe 
-            id="videoPlayer" 
-            width="100%" 
-            height="500" 
-            src="https://www.youtube.com/embed/J2JHDavNZB4" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
+        <video id="videoPlayer" width="100%" height="500" controls>
+            <source src="assets/course_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
     <!-- Course Details and Upcoming Videos -->
@@ -99,6 +94,31 @@
         </div>
     </div>
 
-    <script src="js/player.js"></script>
+    <script>
+        // Function to toggle the chatbox
+        function toggleChatbox() {
+            const chatbox = document.getElementById("chatbox");
+            chatbox.style.display = (chatbox.style.display === "none" || chatbox.style.display === "") ? "block" : "none";
+        }
+
+        // Update course progress
+        function updateCourseProgress(progress) {
+            const progressBar = document.getElementById('progress-bar');
+            const courseProgress = document.getElementById('course-progress');
+            progress = Math.min(progress, 100); // Ensure progress doesn't exceed 100%
+            progressBar.style.width = `${progress}%`;
+            courseProgress.textContent = progress;
+            localStorage.setItem('course1-progress', progress); // Save progress to localStorage
+        }
+
+        // Update progress when video nears the end
+        const video = document.getElementById('videoPlayer');
+        video.addEventListener('timeupdate', () => {
+            const progressThreshold = video.duration * 0.8; // 90% of video watched
+            if (video.currentTime >= progressThreshold) {
+                updateCourseProgress(89); // Set progress to 72% near the end
+            }
+        });
+    </script>
 </body>
 </html>

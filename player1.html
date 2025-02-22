@@ -24,15 +24,10 @@
 
     <!-- Video Player -->
     <div class="video-player-section">
-        <iframe 
-            id="videoPlayer" 
-            width="100%" 
-            height="500" 
-            src="https://www.youtube.com/embed/7bvKLuHxFZQ" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
+        <video id="videoPlayer" width="100%" height="500" controls>
+            <source src="assets/course_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
     <!-- Course Details and Upcoming Videos -->
@@ -54,35 +49,20 @@
         <div class="upcoming-videos">
             <h2>Upcoming Videos</h2>
             <div class="video-cards">
-                <!-- Video Card 1 -->
                 <div class="video-card">
                     <img src="assets/course2.png" alt="Video 1">
                     <h3>Introduction to Weights</h3>
                     <p>Discover the fundamentals of weightlifting, including equipment overview, safety tips, and basic exercises to get started.</p>
                 </div>
-                <!-- Video Card 2 -->
                 <div class="video-card">
                     <img src="assets/course3.png" alt="Video 2">
                     <h3>Proper Form and Technique</h3>
                     <p>Learn the correct form for squats, deadlifts, and bench presses to maximize results and prevent injuries.</p>
                 </div>
-                <!-- Video Card 3 -->
                 <div class="video-card">
                     <img src="assets/course4.png" alt="Video 3">
                     <h3>Advanced Weightlifting</h3>
                     <p>Take your skills to the next level with advanced techniques like drop sets, supersets, and progressive overload.</p>
-                </div>
-                <!-- Video Card 4 -->
-                <div class="video-card">
-                    <img src="assets/course5.png" alt="Video 4">
-                    <h3>Nutrition for Weightlifters</h3>
-                    <p>Understand the role of nutrition in muscle building and recovery, including meal planning and supplements.</p>
-                </div>
-                <!-- Video Card 5 -->
-                <div class="video-card">
-                    <img src="assets/course6.png" alt="Video 5">
-                    <h3>Injury Prevention and Recovery</h3>
-                    <p>Learn how to prevent common weightlifting injuries and recover effectively with stretching and mobility exercises.</p>
                 </div>
             </div>
         </div>
@@ -100,6 +80,31 @@
         </div>
     </div>
 
-    <script src="js/player.js"></script>
+    <script>
+        // Function to toggle the chatbox
+        function toggleChatbox() {
+            const chatbox = document.getElementById("chatbox");
+            chatbox.style.display = (chatbox.style.display === "none" || chatbox.style.display === "") ? "block" : "none";
+        }
+
+        // Update course progress
+        function updateCourseProgress(progress) {
+            const progressBar = document.getElementById('progress-bar');
+            const courseProgress = document.getElementById('course-progress');
+            progress = Math.min(progress, 100); // Ensure progress doesn't exceed 100%
+            progressBar.style.width = `${progress}%`;
+            courseProgress.textContent = progress;
+            localStorage.setItem('course1-progress', progress); // Save progress to localStorage
+        }
+
+        // Update progress when video nears the end
+        const video = document.getElementById('videoPlayer');
+        video.addEventListener('timeupdate', () => {
+            const progressThreshold = video.duration * 0.8; // 90% of video watched
+            if (video.currentTime >= progressThreshold) {
+                updateCourseProgress(72); // Set progress to 72% near the end
+            }
+        });
+    </script>
 </body>
 </html>

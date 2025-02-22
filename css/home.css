@@ -302,8 +302,7 @@ body {
     color: white;
 }
 
-/* Course Cards */
-/* Course Cards */
+/* Course Cards Container */
 .course-cards {
     flex: 3;
     display: grid;
@@ -311,6 +310,7 @@ body {
     gap: 20px;
 }
 
+/* Individual Course Card */
 .course-card {
     background: #D32F2F; /* Dark red background */
     border-radius: 10px;
@@ -324,19 +324,13 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Styling for filtered cards */
-.filtered-card {
-    display: block; /* Ensure filtered cards are displayed */
-    width: 80%; /* Ensure they take up the correct width */
-    height: 50%;
-}
-
 /* Hover Effect for Course Cards */
 .course-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Course Card Image */
 .course-card img {
     width: 100%;
     height: 150px;
@@ -344,12 +338,14 @@ body {
     border-radius: 10px;
 }
 
+/* Course Card Title */
 .course-card h3 {
     margin: 10px 0;
     font-size: 20px;
     color: #FFAE46; /* Golden color */
 }
 
+/* Course Card Description */
 .course-card p {
     margin: 10px 0;
     font-size: 16px;
@@ -357,21 +353,21 @@ body {
     opacity: 0.9;
 }
 
+/* Course Card Rating */
 .course-card .rating {
     font-size: 16px;
     color: #FFD700; /* Gold color for ratings */
     margin-bottom: 10px;
 }
 
-/* Hover Effect for Course Cards */
-.course-card::after {
-    content: "";
+/* Hover Overlay */
+.course-card .hover-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
     color: white;
     display: flex;
     flex-direction: column;
@@ -383,15 +379,26 @@ body {
     box-sizing: border-box;
 }
 
+.course-card:hover .hover-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
 
-.course-card::after h4 {
+/* Hover Overlay Content */
+.hover-overlay h4 {
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-.course-card::after p {
+.hover-overlay p {
     font-size: 14px;
     margin: 5px 0;
+}
+
+/* Styling for Filtered Cards */
+.filtered-card {
+    display: block; /* Ensure filtered cards are displayed */
+    width: 80%; /* Ensure they take up the correct width */
+    height: 50%;
 }
 
 /* Mobile Adjustments */
