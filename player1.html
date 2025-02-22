@@ -43,9 +43,9 @@
             <p>⭐️⭐️⭐️⭐️ (4.0)</p>
             <p>Learn the basics of weight training with expert guidance. This course covers everything from proper form to effective workout routines, ensuring you build strength safely and efficiently. Perfect for beginners looking to start their fitness journey.</p>
             <div class="progress-section">
-                <p><strong>Course Progress:</strong> 57%</p>
+                <p><strong>Course Progress:</strong> <span id="course-progress">57</span>%</p>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 57%;"></div>
+                    <div class="progress" id="progress-bar" style="width: 57%;"></div>
                 </div>
             </div>
         </div>
@@ -88,6 +88,18 @@
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <!-- Chat Icon and Chatbox -->
+    <div class="chat-icon" onclick="toggleChatbox()">💬</div>
+    <div class="chatbox" id="chatbox">
+        <div class="chatbox-header">
+            <h3>Chat</h3>
+            <button onclick="toggleChatbox()">×</button>
+        </div>
+        <div class="chatbox-body">
+            <p>How can I help you?</p>
+        </div>
+    </div>
+
+    <script src="js/player.js"></script>
 </body>
 </html>

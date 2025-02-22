@@ -1,3 +1,10 @@
+/* Global Box Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* Active Courses Section */
 .active-courses-section {
     padding: 20px;
@@ -5,14 +12,34 @@
     margin: 0 auto;
 }
 
-.course-card {
+.hero-section {
+    position: relative;
+    height: 50vh;
+    background: url('../assets/active-bg.jpg') no-repeat center center/cover;
     display: flex;
-    background: #FF6659; /* Light red background */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Course Container */
+.course-container {
+    display: flex;
+    gap: 20px; /* Space between course card and progress box */
+    margin-bottom: 20px;
+}
+
+/* Course Card */
+.course-card {
+    flex: 2; /* Takes 2/3 of the space */
+    background: #D32F2F; /* Dark red background */
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid black; /* Thick black border */
+    display: flex;
 }
 
 .course-info {
@@ -23,6 +50,7 @@
 .course-info h3 {
     margin: 0 0 10px;
     font-size: 24px;
+    color: #FFAE46; /* Golden color */
 }
 
 .course-info p {
@@ -39,20 +67,27 @@
 
 .course-image img {
     width: 100%;
-    max-width: 300px; /* Increased image size */
+    max-width: 300px;
     height: auto;
     border-radius: 10px;
+    border: 3px solid black; /* Thick black border */
 }
 
-.course-progress {
-    flex: 1;
-    padding-left: 20px;
+/* Progress Box */
+.progress-box {
+    flex: 1; /* Takes 1/3 of the space */
+    background: #D32F2F; /* Dark red background */
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid black; /* Thick black border */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.course-progress p {
+.progress-box p {
     margin: 5px 0;
     font-size: 16px;
 }
@@ -67,9 +102,10 @@
 
 .progress {
     height: 100%;
-    background: white;
+    background: #FFAE46; /* Golden color */
     border-radius: 5px;
 }
+
 .resume-button {
     padding: 10px 20px;
     background: white;
@@ -79,35 +115,35 @@
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make it behave like a button */
+    text-decoration: none;
+    display: inline-block;
+    border: 3px solid black; /* Thick black border */
 }
 
 .resume-button:hover {
-    background: #FF6659;
-    color: white;
-}
-
-.resume-button:hover {
-    background: #FF6659;
+    background: #FFAE46; /* Golden color */
     color: white;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-section {
-        height: 70vh; /* Increased height for mobile */
+    .course-container {
+        flex-direction: column; /* Stack course card and progress box vertically on mobile */
     }
+
     .course-card {
         flex-direction: column;
         text-align: center;
     }
 
-    .course-info, .course-image, .course-progress {
+    .course-info, .course-image, .progress-box {
         padding: 10px 0;
     }
 
     .course-image img {
         max-width: 100%;
+    }
+    .progress-box {
+        padding: 10px;
     }
 }

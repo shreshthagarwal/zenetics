@@ -5,6 +5,18 @@
     padding: 0;
 }
 
+.hero-section {
+    position: relative;
+    height: 50vh;
+    background: url('../assets/feedback-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+
 /* Reviews Section */
 .reviews-section {
     padding: 20px;
@@ -16,6 +28,7 @@
 .reviews-section h2 {
     font-size: 28px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .review-cards-container {
@@ -31,13 +44,14 @@
 }
 
 .review-card {
-    background: #FF6659; /* Light red background */
+    background: #D32F2F; /* Dark red background */
     border-radius: 10px;
     padding: 20px;
     width: 250px;
     text-align: center;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid black; /* Thick black border */
     flex-shrink: 0; /* Prevent cards from shrinking */
 }
 
@@ -46,6 +60,7 @@
     height: 80px;
     border-radius: 50%;
     margin-bottom: 10px;
+    border: 3px solid black; /* Thick black border */
 }
 
 .review-card h3 {
@@ -69,17 +84,27 @@
 .selected-course-section h2 {
     font-size: 28px;
     margin-bottom: 20px;
+    color: white;
+}
+
+#course-select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 3px solid black; /* Thick black border */
+    margin-bottom: 20px;
 }
 
 .selected-course {
     display: flex;
     align-items: center;
     gap: 20px;
-    background: #FF6659; /* Light red background */
+    background: #D32F2F; /* Dark red background */
     border-radius: 10px;
     padding: 20px;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid black; /* Thick black border */
     margin-bottom: 20px;
 }
 
@@ -87,6 +112,7 @@
     width: 250px;
     height: 150px;
     border-radius: 10px;
+    border: 3px solid black; /* Thick black border */
 }
 
 .course-details {
@@ -105,11 +131,12 @@
 }
 
 .review-box {
-    background: #FF6659; /* Light red background */
+    background: #D32F2F; /* Dark red background */
     border-radius: 10px;
     padding: 20px;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid black; /* Thick black border */
 }
 
 .review-box h3 {
@@ -122,7 +149,7 @@
     height: 100px;
     padding: 10px;
     border-radius: 5px;
-    border: none;
+    border: 3px solid black; /* Thick black border */
     margin-bottom: 10px;
     font-size: 16px;
 }
@@ -135,14 +162,14 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    border: 3px solid black; /* Thick black border */
 }
 
 .submit-button:hover {
-    background: #FF6659;
+    background: #FFAE46; /* Golden color */
     color: white;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .selected-course {
         flex-direction: column;

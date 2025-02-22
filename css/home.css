@@ -1,8 +1,7 @@
-/* Global Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #D32F2F; /* Changed to match navbar color */
+    background-color: #FF6659; /* Changed to light red */
     color: white; /* Default text color */
 }
 
@@ -11,7 +10,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #D32F2F;
+    background: #FF6659; /* Changed to light red */
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -52,9 +51,10 @@ body {
 }
 
 .nav-links a.active {
-    background: #FF6659;
+    background: #D32F2F; /* Changed to dark red */
     color: white;
     font-weight: bold;
+    border: 3px solid black;
 }
 
 .hamburger {
@@ -77,7 +77,7 @@ body {
         top: 60px;
         left: 0;
         width: 100%;
-        background: #D32F2F;
+        background: #FF6659; /* Changed to light red */
         text-align: center;
         padding: 10px 0;
         box-sizing: border-box; /* Ensure padding is included in width */
@@ -101,7 +101,7 @@ body {
 .hero-section {
     position: relative;
     height: 50vh;
-    background: url('../assets/bg.jpg') no-repeat center center/cover;
+    background: url('../assets/home-bg.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,7 +124,7 @@ body {
 }
 
 .site-logo {
-    width: 300px; /* Increased logo size */
+    width: 500px; /* Increased logo size */
     height: auto;
 }
 
@@ -161,8 +161,9 @@ body {
     margin: 0 auto;
     overflow: hidden;
     height: 50vh; /* 50% of viewport height */
-    background: #FF6659; /* Light red background */
+    background: #D32F2F; /* Changed to dark red */
     border-radius: 10px;
+    border: 5px solid black; /* Thick black border */
 }
 
 .carousel-inner {
@@ -186,7 +187,7 @@ body {
     gap: 20px;
     width: 80%;
     height: 80%;
-    background: #FF6659; /* Light red background */
+    background: #D32F2F; /* Changed to dark red */
     border-radius: 10px;
     overflow: hidden;
     color: white; /* White font color */
@@ -208,11 +209,18 @@ body {
 .carousel-text h3 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #FFAE46; /* Updated heading color */
 }
 
 .carousel-text p {
     font-size: 18px;
     color: white; /* White font color */
+}
+
+.carousel-text .rating {
+    font-size: 16px;
+    color: #FFD700; /* Gold color for ratings */
+    margin-bottom: 10px;
 }
 
 .carousel-button {
@@ -246,12 +254,13 @@ body {
 
 .filter-box {
     flex: 1;
-    background: #FF6659; /* Light red background */
+    background: #D32F2F; /* Changed to dark red */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: white;
     box-sizing: border-box; /* Ensure padding is included in width */
+    border: 5px solid black; /* Thick black border */
 }
 
 .filter-box h3 {
@@ -285,13 +294,16 @@ body {
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .apply-button:hover {
-    background: #FF6659;
+    background: #FFAE46; /* Golden color */
     color: white;
 }
 
+/* Course Cards */
+/* Course Cards */
 .course-cards {
     flex: 3;
     display: grid;
@@ -300,13 +312,29 @@ body {
 }
 
 .course-card {
-    background: #FF6659; /* Light red background */
+    background: #D32F2F; /* Dark red background */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: white;
-    text-align: center; /* Center-align text */
+    text-align: center;
     padding: 20px;
+    border: 5px solid black; /* Thick black border */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styling for filtered cards */
+.filtered-card {
+    display: block; /* Ensure filtered cards are displayed */
+    width: 80%; /* Ensure they take up the correct width */
+    height: 50%;
+}
+
+/* Hover Effect for Course Cards */
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .course-card img {
@@ -318,49 +346,87 @@ body {
 
 .course-card h3 {
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 20px;
+    color: #FFAE46; /* Golden color */
 }
 
 .course-card p {
     margin: 10px 0;
+    font-size: 16px;
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+
+.course-card .rating {
+    font-size: 16px;
+    color: #FFD700; /* Gold color for ratings */
+    margin-bottom: 10px;
+}
+
+/* Hover Effect for Course Cards */
+.course-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.course-card::after h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.course-card::after p {
     font-size: 14px;
+    margin: 5px 0;
 }
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-    /* Hero Section Adjustments */
     .hero-section {
-        height: 70vh; /* Increased height for mobile */
+        height: 70vh;
     }
 
     .categories {
-        flex-wrap: wrap; /* Allow icons to wrap if needed */
-        gap: 20px; /* Reduce gap for better spacing */
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     .category img {
-        width: 40px; /* Slightly reduce icon size */
+        width: 40px;
         height: 40px;
     }
 
     .category p {
-        font-size: 16px; /* Reduce font size for better fit */
+        font-size: 16px;
     }
 
-    /* Carousel Adjustments */
     .carousel {
-        height: 60vh; /* Increased height for mobile */
+        height: 60vh;
     }
 
     .carousel-content {
         flex-direction: column;
         text-align: center;
-        height: 90%; /* Ensure content fits within the carousel */
+        height: 90%;
     }
 
     .carousel-content img {
         width: 100%;
-        height: 200px; /* Fixed height for image */
+        height: 200px;
     }
 
     .carousel-text {
@@ -370,14 +436,13 @@ body {
     }
 
     .carousel-text h3 {
-        font-size: 20px; /* Slightly reduce heading size */
+        font-size: 20px;
     }
 
     .carousel-text p {
-        font-size: 16px; /* Slightly reduce description size */
+        font-size: 16px;
     }
 
-    /* Course Section Adjustments */
     .course-section {
         flex-direction: column;
     }
@@ -389,5 +454,10 @@ body {
 
     .course-cards {
         grid-template-columns: 1fr;
+    }
+
+    .site-logo {
+        width: 300px;
+        height: auto;
     }
 }
