@@ -198,19 +198,19 @@ body {
 }
 
 .carousel-left h3 {
-    font-size: 24px;
+    font-size: 20px; /* Smaller font size */
     margin-bottom: 10px;
     color: #FFAE46; /* Golden color */
 }
 
 .carousel-left .rating {
-    font-size: 16px;
+    font-size: 14px; /* Smaller font size */
     color: #FFD700; /* Gold color for ratings */
     margin-bottom: 10px;
 }
 
 .carousel-left p {
-    font-size: 16px;
+    font-size: 14px; /* Smaller font size */
     margin-bottom: 10px;
 }
 
@@ -233,10 +233,12 @@ body {
     flex: 1;
     padding: 20px;
     text-align: left;
+    border: 3px solid black; /* Black border added */
+    border-radius: 10px;
 }
 
 .carousel-right h4 {
-    font-size: 18px;
+    font-size: 16px; /* Smaller font size */
     margin-bottom: 10px;
     color: #FFAE46; /* Golden color */
 }
@@ -248,7 +250,7 @@ body {
 
 .carousel-right li {
     margin: 5px 0;
-    font-size: 16px;
+    font-size: 14px; /* Smaller font size */
 }
 
 .carousel-button {
@@ -272,7 +274,6 @@ body {
 .carousel-button.next {
     right: 20px;
 }
-
 /* Course Section */
 .course-section {
     display: flex;
