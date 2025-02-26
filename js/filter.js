@@ -10,20 +10,20 @@ function applyFilters() {
     // Loop through each card and check if it matches the filters
     courseCards.forEach(card => {
         const category = card.getAttribute('data-category');
-        const duration = card.getAttribute('data-duration');
-        const videos = card.getAttribute('data-videos');
+        const duration = parseInt(card.getAttribute('data-duration')); // Convert to number
+        const videos = parseInt(card.getAttribute('data-videos')); // Convert to number
 
         // Check if the card matches the selected filters
         const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(category);
         const durationMatch = !selectedDuration || (
-            (selectedDuration === "more than 10" && duration === "more than 10") ||
-            (selectedDuration === "10-15" && duration === "10-15") ||
-            (selectedDuration === "15-20" && duration === "15-20")
+            (selectedDuration === "more than 10" && duration > 10) ||
+            (selectedDuration === "10-15" && duration >= 10 && duration <= 15) ||
+            (selectedDuration === "15-20" && duration >= 15 && duration <= 20)
         );
         const videosMatch = !selectedVideos || (
-            (selectedVideos === "3 or more" && videos === "3 or more") ||
-            (selectedVideos === "3-5" && videos === "3-5") ||
-            (selectedVideos === "5 or more" && videos === "5 or more")
+            (selectedVideos === "3 or more" && videos >= 3) ||
+            (selectedVideos === "3-5" && videos >= 3 && videos <= 5) ||
+            (selectedVideos === "5 or more" && videos >= 5)
         );
 
         // Show or hide the card based on filter matches

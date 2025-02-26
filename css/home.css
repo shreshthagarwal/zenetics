@@ -1,8 +1,8 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #FF6659; /* Changed to light red */
-    color: white; /* Default text color */
+    font-family: Tahoma, sans-serif;
+    background-color: #f2f2f2; /* Light gray background */
+    color: black; /* Default text color */
 }
 
 /* Navbar */
@@ -10,14 +10,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #FF6659; /* Changed to light red */
+    background: #f2f2f2; /* Light gray background */
     padding: 10px 20px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    box-sizing: border-box; /* Ensure padding is included in width */
+    box-sizing: border-box;
+    border-bottom: 5px solid black; /* Thick black border */
 }
 
 .profile-photo {
@@ -42,7 +43,7 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: black; /* Black text color */
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
@@ -51,7 +52,7 @@ body {
 }
 
 .nav-links a.active {
-    background: #D32F2F; /* Changed to dark red */
+    background: #D32F2F; /* Dark red background */
     color: white;
     font-weight: bold;
     border: 3px solid black;
@@ -60,14 +61,13 @@ body {
 .hamburger {
     display: none;
     font-size: 30px;
-    color: white;
+    color: black; /* Black text color */
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
     .navbar {
         padding: 10px;
-        box-sizing: border-box; /* Ensure padding is included in width */
     }
 
     .nav-links {
@@ -77,10 +77,9 @@ body {
         top: 60px;
         left: 0;
         width: 100%;
-        background: #FF6659; /* Changed to light red */
+        background: #f2f2f2; /* Light gray background */
         text-align: center;
         padding: 10px 0;
-        box-sizing: border-box; /* Ensure padding is included in width */
     }
 
     .nav-links.show {
@@ -91,7 +90,6 @@ body {
         display: block;
     }
 
-    /* Prevent horizontal scrolling */
     body {
         overflow-x: hidden;
     }
@@ -160,8 +158,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
-    height: 50vh; /* 50% of viewport height */
-    background: #D32F2F; /* Changed to dark red */
+    height: 60vh; /* 50% of viewport height */
+    background: #D32F2F; /* Dark red background */
     border-radius: 10px;
     border: 5px solid black; /* Thick black border */
 }
@@ -185,42 +183,72 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    width: 80%;
+    width: 90%;
     height: 80%;
-    background: #D32F2F; /* Changed to dark red */
+    background: #D32F2F; /* Dark red background */
     border-radius: 10px;
     overflow: hidden;
-    color: white; /* White font color */
+    color: white;
 }
 
-.carousel-content img {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.carousel-text {
-    width: 50%;
+.carousel-left {
+    flex: 1;
     padding: 20px;
     text-align: left;
-    color: white; /* White font color */
 }
 
-.carousel-text h3 {
+.carousel-left h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #FFAE46; /* Updated heading color */
+    color: #FFAE46; /* Golden color */
 }
 
-.carousel-text p {
-    font-size: 18px;
-    color: white; /* White font color */
-}
-
-.carousel-text .rating {
+.carousel-left .rating {
     font-size: 16px;
     color: #FFD700; /* Gold color for ratings */
     margin-bottom: 10px;
+}
+
+.carousel-left p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.carousel-middle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-middle img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-right {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.carousel-right h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #FFAE46; /* Golden color */
+}
+
+.carousel-right ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.carousel-right li {
+    margin: 5px 0;
+    font-size: 16px;
 }
 
 .carousel-button {
@@ -254,12 +282,12 @@ body {
 
 .filter-box {
     flex: 1;
-    background: #D32F2F; /* Changed to dark red */
+    background: #D32F2F; /* Dark red background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: white;
-    box-sizing: border-box; /* Ensure padding is included in width */
+    box-sizing: border-box;
     border: 5px solid black; /* Thick black border */
 }
 
@@ -280,8 +308,9 @@ body {
     cursor: pointer;
 }
 
-.filter-option input {
-    margin-right: 10px;
+.filter-option input:checked + label {
+    color: #FFAE46; /* Golden color for selected filters */
+    font-weight: bold;
 }
 
 .apply-button {
@@ -324,13 +353,11 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect for Course Cards */
 .course-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Course Card Image */
 .course-card img {
     width: 100%;
     height: 150px;
@@ -338,14 +365,12 @@ body {
     border-radius: 10px;
 }
 
-/* Course Card Title */
 .course-card h3 {
     margin: 10px 0;
     font-size: 20px;
     color: #FFAE46; /* Golden color */
 }
 
-/* Course Card Description */
 .course-card p {
     margin: 10px 0;
     font-size: 16px;
@@ -353,7 +378,6 @@ body {
     opacity: 0.9;
 }
 
-/* Course Card Rating */
 .course-card .rating {
     font-size: 16px;
     color: #FFD700; /* Gold color for ratings */
@@ -383,7 +407,6 @@ body {
     opacity: 1; /* Show overlay on hover */
 }
 
-/* Hover Overlay Content */
 .hover-overlay h4 {
     font-size: 18px;
     margin-bottom: 10px;
@@ -392,13 +415,6 @@ body {
 .hover-overlay p {
     font-size: 14px;
     margin: 5px 0;
-}
-
-/* Styling for Filtered Cards */
-.filtered-card {
-    display: block; /* Ensure filtered cards are displayed */
-    width: 80%; /* Ensure they take up the correct width */
-    height: 50%;
 }
 
 /* Mobile Adjustments */

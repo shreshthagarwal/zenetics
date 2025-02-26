@@ -6,7 +6,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
+    font-family: Tahoma, sans-serif; /* Updated font to Tahoma */
     margin: 0;
     position: relative;
     overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -23,12 +23,12 @@ body::before {
     z-index: -1;
 }
 
-/* Navbar Styling - Light Red Theme */
+/* Navbar Styling - Light Gray Theme */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #FF6659; /* Light red */
+    background: #f2f2f2; /* Light gray */
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -63,7 +63,7 @@ body::before {
 }
 
 .nav-links a {
-    color: white;
+    color: black; /* Text color for navbar links */
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
@@ -73,8 +73,8 @@ body::before {
 
 /* Active Tab Highlight */
 .nav-links a.active {
-    background: #D32F2F; /* Dark red */
-    color: white;
+    background: #D32F2F; /* Light gray for active tab */
+    color: white; /* Text color for active tab */
     font-weight: bold;
     border: 3px solid black; /* Thick black border */
 }
@@ -83,7 +83,7 @@ body::before {
 .hamburger {
     display: none;
     font-size: 30px;
-    color: white;
+    color: black; /* Icon color for hamburger menu */
     cursor: pointer;
 }
 
@@ -96,7 +96,7 @@ body::before {
         top: 60px;
         left: 0;
         width: 100%;
-        background: #FF6659; /* Light red */
+        background: #f2f2f2; /* Light gray */
         text-align: center;
         padding: 10px 0;
         box-sizing: border-box; /* Ensure padding is included in width */
@@ -136,7 +136,7 @@ body::before {
     }
 }
 
-/* Login Box - Bigger & Higher */
+/* Login Box - Bigger & Higher (Red Background) */
 .login-container {
     background: #D32F2F; /* Dark red */
     padding: 35px;
@@ -145,33 +145,10 @@ body::before {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 420px; /* Increased width */
-    color: white;
+    color: white; /* Text color for login container */
     margin-top: 20px; /* Adjusted spacing */
     box-sizing: border-box; /* Ensure padding is included in width */
     border: 5px solid black; /* Thick black border */
-}
-
-/* Google Login Button */
-.google-login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    padding: 14px;
-    background: white;
-    color: black;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    border: 3px solid black; /* Thick black border */
-}
-
-/* Google Icon - Fixed Size */
-.google-icon {
-    width: 44px;
-    height: 24px;
 }
 
 /* Input Fields - Uniform Width */
@@ -191,7 +168,7 @@ button {
     width: 100%; /* Full width */
     padding: 14px;
     background: white;
-    color: #D32F2F;
+    color: #D32F2F; /* Red text color */
     border: none;
     border-radius: 5px;
     font-size: 18px;
@@ -202,6 +179,6 @@ button {
 }
 
 button:hover {
-    background: #FF6659; /* Light red */
-    color: white;
+    background: #FF6659; /* Light red on hover */
+    color: white; /* White text on hover */
 }

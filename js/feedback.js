@@ -1,14 +1,18 @@
 // Sample reviews data
 const reviewsData = {
-    "beginner-weights": [
-        { name: "John Doe", review: "This course changed my life! Highly recommended.", course: "Beginner Weights" },
-        { name: "Jane Smith", review: "Amazing content and great instructors.", course: "Beginner Weights" },
-        { name: "Alice Johnson", review: "Very well-structured and easy to follow.", course: "Beginner Weights" }
+    "arms-arsenal": [
+        { name: "John Doe", review: "This course is perfect for beginners. Highly recommended!", course: "Arms Arsenal - Beginner Dumbbell Edition" },
+        { name: "Jane Smith", review: "Great for building arm strength with proper form.", course: "Arms Arsenal - Beginner Dumbbell Edition" },
+        { name: "Alex Johnson", review: "The progressive workouts are fantastic. I can already feel the difference!", course: "Arms Arsenal - Beginner Dumbbell Edition" },
+        { name: "Emily Davis", review: "Short and engaging sessions that fit perfectly into my schedule.", course: "Arms Arsenal - Beginner Dumbbell Edition" },
+        { name: "Michael Brown", review: "The focus on controlled movements really helped me avoid injuries.", course: "Arms Arsenal - Beginner Dumbbell Edition" }
     ],
-    "advanced-calisthenics": [
-        { name: "Bob Brown", review: "Great for beginners and advanced learners alike.", course: "Advanced Calisthenics" },
-        { name: "Charlie Davis", review: "The best fitness course I've ever taken.", course: "Advanced Calisthenics" },
-        { name: "Eve Wilson", review: "Highly engaging and informative.", course: "Advanced Calisthenics" }
+    "core-command": [
+        { name: "Bob Brown", review: "Excellent bodyweight exercises for core strength.", course: "Core Command - No Equipment Edition" },
+        { name: "Charlie Davis", review: "Loved the progressive difficulty in each session.", course: "Core Command - No Equipment Edition" },
+        { name: "Sophia Wilson", review: "The no-equipment approach is so convenient. Highly effective too!", course: "Core Command - No Equipment Edition" },
+        { name: "Daniel Martinez", review: "My core has never been stronger. The rotational strength exercises are a game-changer.", course: "Core Command - No Equipment Edition" },
+        { name: "Olivia Taylor", review: "The substitute exercises for the bar are a lifesaver. Great course!", course: "Core Command - No Equipment Edition" }
     ]
 };
 
@@ -40,16 +44,16 @@ function loadReviews() {
     const selectedCourseRating = document.getElementById("selected-course-rating");
     const selectedCourseDescription = document.getElementById("selected-course-description");
 
-    if (selectedCourse === "beginner-weights") {
+    if (selectedCourse === "arms-arsenal") {
         selectedCourseImage.src = "assets/course1.png";
-        selectedCourseTitle.textContent = "Beginner Weights";
+        selectedCourseTitle.textContent = "Arms Arsenal - Beginner Dumbbell Edition";
         selectedCourseRating.textContent = "⭐️⭐️⭐️⭐️ (4.0)";
-        selectedCourseDescription.textContent = "Learn the basics of weight training, including proper form, safety, and effective exercises to build strength.";
+        selectedCourseDescription.textContent = "Designed specifically for teens looking to build strength in their biceps, triceps, and forearms using simple yet effective dumbbell exercises.";
     } else {
         selectedCourseImage.src = "assets/course2.png";
-        selectedCourseTitle.textContent = "Advanced Calisthenics";
+        selectedCourseTitle.textContent = "Core Command - No Equipment Edition";
         selectedCourseRating.textContent = "⭐️⭐️⭐️⭐️⭐️ (5.0)";
-        selectedCourseDescription.textContent = "Push your limits with advanced bodyweight exercises. Learn handstands, muscle-ups, and more to elevate your fitness game.";
+        selectedCourseDescription.textContent = "Build a strong, functional core using purely bodyweight movements. Emphasizes stability, endurance, and rotational strength.";
     }
 }
 
@@ -65,7 +69,7 @@ function submitReview() {
     const selectedCourse = courseSelect.value;
 
     // Get the course name based on the selected course
-    const courseName = selectedCourse === "beginner-weights" ? "Beginner Weights" : "Advanced Calisthenics";
+    const courseName = selectedCourse === "arms-arsenal" ? "Arms Arsenal - Beginner Dumbbell Edition" : "Core Command - No Equipment Edition";
 
     // Add the new review to the reviews data
     reviewsData[selectedCourse].push({ name: "You", review: reviewText, course: courseName });

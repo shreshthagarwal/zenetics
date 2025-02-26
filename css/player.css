@@ -95,12 +95,16 @@
 /* Image Section */
 .image-section {
     display: flex;
+    flex-direction: column; /* Stack image items vertically */
     gap: 20px;
     margin-top: 20px;
 }
 
 .image-item {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%; /* Take full width */
 }
 
 .image-item img {
@@ -110,7 +114,8 @@
 }
 
 .image-item p {
-    margin-top: 10px;
+    flex: 1;
+    margin: 0;
     font-size: 14px;
     color: white;
 }
@@ -162,6 +167,12 @@
 .video-card p {
     margin: 5px 0;
     font-size: 14px;
+}
+
+/* Remove blue color from hyperlink */
+.video-link {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
 }
 
 /* Responsive Design */

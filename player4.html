@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenetics - Player 2</title>
+    <link rel="stylesheet" href="css/home.css"> <!-- Reuse home.css -->
+    <link rel="stylesheet" href="css/player.css"> <!-- Add new CSS for this page -->
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <img src="assets/profile.png" alt="Profile" class="profile-photo">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="index.html" id="nav-login">Login/Signup</a></li>
+                <li><a href="home.html" id="nav-home">Home</a></li>
+                <li><a href="active-courses.html" id="nav-courses">Active Courses</a></li>
+                <li><a href="feedback.html" id="nav-reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner with Logo and Course Name -->
+    <div class="banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <a href="home.html">
+                <img src="assets/logo.png" alt="Zenetics Logo" class="banner-logo">
+            </a>
+            <h1>Core Command - No Equipment Edition</h1>
+        </div>
+    </div>
+
+    <!-- Video Player -->
+    <div class="video-player-section">
+        <video id="videoPlayer" width="100%" height="500" controls>
+            <source src="assets/Core Command-2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Course Details and Upcoming Videos -->
+    <div class="course-details-section">
+        <!-- Course Details -->
+        <div class="course-details">
+            <h2>Core Command - No Equipment Edition</h2>
+            <p>⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
+            <p>Focus: Engaging rotational and side core muscles to enhance agility and stability. <br> <br>
+                Exercises: <br>
+                1️⃣ Heel Touch (3 sets of 15 reps per side) <br>
+                2️⃣ Plank (3 sets of 40 seconds) <br>
+                3️⃣ Side Tucks (3 sets of 12 reps per side) <br>
+            </p>
+            <div class="progress-section">
+                <p><strong>Course Progress:</strong> <span id="course-progress">25</span>%</p>
+                <div class="progress-bar">
+                    <div class="progress" id="progress-bar" style="width: 25%;"></div>
+                </div>
+            </div>
+            <!-- Images and Descriptions -->
+            <div class="image-section">
+                <div class="image-item">
+                    <img src="https://www.inspireusafoundation.org/wp-content/uploads/2022/12/alternate-heel-touchers-muscles-1024x406.png" alt="Heel Touch">
+                    <p><strong>Heel Touch (3 sets of 15 reps per side):</strong> Lie on your back with knees bent and feet flat on the floor. Engage your core and lift your upper back slightly. Reach one hand toward the same-side heel, then switch sides. <em>Common Mistake:</em> Relying on the neck instead of the obliques—focus on using your core to drive the movement.</p>
+                </div>
+                <div class="image-item">
+                    <img src="https://physicalliving.com/img/how_to_do_a_plank_proper_plank_form_notes.jpg" alt="Plank">
+                    <p><strong>Plank (3 sets of 40 seconds):</strong> Get into a forearm plank position, keeping your body in a straight line. Engage your core, squeeze the glutes, and hold the position. <em>Common Mistake:</em> Sagging hips or raising the buttocks—keep a neutral spine to maximize core engagement.</p>
+                </div>
+                <div class="image-item">
+                    <img src="https://fitwill.app/api/image/4990?p=1&w=1920&h=1080" alt="Side Tucks">
+                    <p><strong>Side Tucks (3 sets of 12 reps per side):</strong> Sit on the floor with hands behind you for support. Lift your legs and twist your torso to bring your knees toward one side. Extend your legs back out and repeat on the other side. <em>Common Mistake:</em> Using momentum instead of controlled movements—engage the obliques for a stronger contraction.</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Upcoming Videos -->
+        <div class="upcoming-videos">
+            <h2>Upcoming Videos</h2>
+            <div class="video-cards">
+                
+                <div class="video-card">
+                        <img src="assets/course3.png" alt="Video 2">
+                        <h3>Dynamic Core Activation & Side Stability</h3>
+                        <p>Boost core agility and rotational strength with dynamic movements targeting obliques and deep core muscles. Heel touches, side tucks, and planks improve stability, control, and endurance, helping develop a balanced and powerful core for functional strength.</p>
+                </div>
+                <div class="video-card">
+                        <img src="assets/course4.png" alt="Video 3">
+                        <h3>Core Endurance & Strength Progression</h3>
+                        <p>Introduces longer isometric holds and controlled movements to build endurance and core resilience. Exercises include side planks, V-ups, and slow bicycle crunches, targeting deep core muscles, improving posture, and increasing muscular control for prolonged engagement in sports and physical activities.</p>
+                </div>
+                <div class="video-card">
+                        <img src="assets/course5.png" alt="Video 4">
+                        <h3>Core Mastery & Full-Body Integration</h3>
+                        <p>Combines all learned techniques into a high-intensity core finisher. Exercises like L-sit holds, dragon flags, and advanced plank variations push core stability to its limit, reinforcing control, endurance, and explosive strength for a fully functional and well-conditioned core.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Icon and Chatbox -->
+    <div class="chat-icon" onclick="toggleChatbox()">💬</div>
+    <div class="chatbox" id="chatbox">
+        <div class="chatbox-header">
+            <h3>Chat</h3>
+            <button onclick="toggleChatbox()">×</button>
+        </div>
+        <div class="chatbox-body">
+            <p>How can I help you?</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle the chatbox
+        function toggleChatbox() {
+            const chatbox = document.getElementById("chatbox");
+            chatbox.style.display = (chatbox.style.display === "none" || chatbox.style.display === "") ? "block" : "none";
+        }
+
+        // Update course progress
+        function updateCourseProgress(progress) {
+            const progressBar = document.getElementById('progress-bar');
+            const courseProgress = document.getElementById('course-progress');
+            progress = Math.min(progress, 100); // Ensure progress doesn't exceed 100%
+            progressBar.style.width = `${progress}%`;
+            courseProgress.textContent = progress;
+            localStorage.setItem('course2-progress', progress); // Save progress to localStorage
+        }
+
+        // Update progress when video nears the end
+        const video = document.getElementById('videoPlayer');
+        video.addEventListener('timeupdate', () => {
+            const progressThreshold = video.duration * 0.8; // 90% of video watched
+            if (video.currentTime >= progressThreshold) {
+                updateCourseProgress(50); // Set progress to 89% near the end
+            }
+        });
+    </script>
+</body>
+</html>

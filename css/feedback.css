@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+body {
+    background-color: #f2f2f2; /* Light gray background */
+}
+
 .hero-section {
     position: relative;
     height: 50vh;
@@ -15,7 +19,6 @@
     text-align: center;
     color: white;
 }
-
 
 /* Reviews Section */
 .reviews-section {
@@ -28,7 +31,7 @@
 .reviews-section h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: white;
+    color: black; /* Black heading */
 }
 
 .review-cards-container {
@@ -66,6 +69,7 @@
 .review-card h3 {
     margin: 10px 0;
     font-size: 20px;
+    color: black; /* Black heading */
 }
 
 .review-card p {
@@ -84,7 +88,7 @@
 .selected-course-section h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: white;
+    color: black; /* Black heading */
 }
 
 #course-select {
@@ -123,6 +127,7 @@
 .course-details h3 {
     margin: 0 0 10px;
     font-size: 24px;
+    color: black; /* Black heading */
 }
 
 .course-details p {
@@ -142,6 +147,7 @@
 .review-box h3 {
     margin: 0 0 10px;
     font-size: 24px;
+    color: black; /* Black heading */
 }
 
 .review-box textarea {
